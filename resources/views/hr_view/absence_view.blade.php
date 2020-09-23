@@ -81,47 +81,47 @@ function tgl_indo($tanggal)
                                         </div>
                                         <div class="widget-body">
                                             <div class="row">
-                                            <div class="col-sm-12">
-                                                            <?php $no = 1; ?>
-                                                            <table id="dt_basic_2" class="table table-striped table-bordered table-hover" width="100%">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>
-                                                                            No.
-                                                                        </th>
-                                                                        <th>
-                                                                            Nama Employee
-                                                                        </th>
-                                                                        <th>
-                                                                            Tanggal
-                                                                        </th>
-                                                                        <th>
-                                                                            Jam Masuk
-                                                                        </th>
-                                                                        <th>
-                                                                            Jam Pulang
-                                                                        </th>
-                                                                        <th>
-                                                                            Divisi
-                                                                        </th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <?php $no = 1; ?>
-                                                                <tbody id="isiTableedit">
-                                                                    @foreach($absen as $item)
-                                                                    <tr>
-                                                                        <td>{{$no++}}</td>
-                                                                        <td>{{$item->nama_empl}}</td>
-                                                                        <td>{{date('j F, Y', strtotime($item->tgl_absen))}}</td>
-                                                                        <td>{{date('H:i:s',strtotime($item->jam_masuk))}}</td>
-                                                                        <td>@if(!empty($item->jam_keluar)){{date('H:i:s',strtotime($item->jam_keluar))}}@else-@endif</td>
-                                                                        <td>{{$item->divisi_name}}</td>
-                                                                    </tr>
-                                                                    @endforeach
-                                                                </tbody>
-                                                            </table>
+                                                <div class="col-sm-12">
+                                                    <?php $no = 1; ?>
+                                                    <table id="dt_basic_2" class="table table-striped table-bordered table-hover" width="100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>
+                                                                    No.
+                                                                </th>
+                                                                <th>
+                                                                    Nama Employee
+                                                                </th>
+                                                                <th>
+                                                                    Tanggal
+                                                                </th>
+                                                                <th>
+                                                                    Jam Masuk
+                                                                </th>
+                                                                <th>
+                                                                    Jam Pulang
+                                                                </th>
+                                                                <th>
+                                                                    Divisi
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <?php $no = 1; ?>
+                                                        <tbody id="isiTableedit">
+                                                            @foreach($absen as $item)
+                                                            <tr>
+                                                                <td>{{$no++}}</td>
+                                                                <td>{{$item->nama_empl}}</td>
+                                                                <td>{{date('j F, Y', strtotime($item->tgl_absen))}}</td>
+                                                                <td>{{date('H:i:s',strtotime($item->jam_masuk))}}</td>
+                                                                <td>@if(!empty($item->jam_keluar)){{date('H:i:s',strtotime($item->jam_keluar))}}@else-@endif</td>
+                                                                <td>{{$item->divisi_name}}</td>
+                                                            </tr>
+                                                            @endforeach
+                                                        </tbody>
+                                                    </table>
 
-                                                        </div>
+                                                </div>
                                             </div>
                                             <hr class="simple">
                                         </div>
